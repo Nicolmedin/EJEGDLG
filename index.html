@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login basico</title>
+
+	<style>login
+	   /*
+	        ESTILO GENERAL DE LA PAGINA:
+	        Aqui se cambia el color de fondo, el tipo de letra
+	        y la posicion del contenido.
+        */
+	    body {
+	    	background-color:  skyblue;
+	    	font-family: Arial, sans-serif;
+	    	text-align: center;
+	    }
+
+	    /*
+	        CAJA DEL LOGIN:
+	        Esta parte cree el cuadro donde estara el formulario.
+	    */
+	    .caja-login {
+	    	 background-color: wite;
+	    	 width:300px;
+	    	 margin: 100px auto;
+	    	 padding: 25px;
+	    	 border: 2px solid black;
+	    	 border-radius: 10px;
+	    	}
+
+	    	/*
+	    	  CAMPOS DE TEXTO:
+	    	  Aqui se modifica el tamaño de los campos usuarios y contraseña.
+	    	*/
+	    	input {
+	    	   width: 90%;
+	    	   padding: 8px;	
+	    	   margin: 8px;
+	    	}
+	    	  
+	    	/*
+	    	  BOTON:
+	    	  Aqui se modifica el diseño del boton intresar.
+	    	*/
+	    	button
+	    	    background-color: green;
+	    	    color: wite;
+	    	    padding: 10px;
+	    	    width: 95%;
+	    	    border:none;
+	    	    cursor: pointer;
+	    	}
+	    	
+	    	/*
+	    	   MENSAJE:
+	    	   Aqui aparecera si el usuario es correto o incorrecto
+	    	*/
+	    	#mensaje {
+	    		font-weight:bold;
+	    		margin-top: 15px;
+	    	}
+	    </style>
+</head>
+
+<body>
+
+	<!--
+	    TITULO PRINCIPAL:
+	    puedes cambiar este texto por el nombre de tu negocio o incorrecto.
+	-->
+	<h1>login de Tienda El ahorro</h1>
+
+	<!--
+	   CAJA PRINCIPAL:
+	   Aqui estara el formulario para ingresar usuario y contraseña.
+	-->
+	<div class="caja-login">
+
+		<h2>iniciar sesion</h2>
+
+		<!--
+		  CAMPO USUARIO:
+		  El usuario escribira aqui su nombre de usuario.
+		  El id-"usurio" sirve para que JavaScript pueda leer este dato.
+		-->
+		<input type="text" id="usuario" placehalder="Escribe tu usuario">
+
+		<br>
+
+	    <!--
+	       CAMPO CONTRASEÑA:
+	       lype="password" oculta lo que se escribe.
+	       El id="contraseña" sirve para que JavaScript pueda leer este dato.
+		-->
+		<input type="password" 1d="contraseña" placeholder="Escribe tu contraseña">
+
+		<br>
+
+		<!--
+		   BOTON:
+		   Cuando se presiona, ejecuta la funcion validarlogin().
+		-->
+		<button onclick="validarlogin()">Ingresar</button>
+
+		<!--
+		   MENSAJE:
+		   Aqui aparecera el resultado:
+		   Usuario correcto o vuelve a intentar.
+		-->
+		<p id="mensaje"></p>
+
+	</div>
+
+	<script>
+		/*
+		   FUNCION VALIDAR LOGIN:
+           Esta funcion revisa si el usuario y la contraseña
+           son correctos.
+        */
+        function validarlogin()  {
+
+           /*
+             OBTENER DATOS:
+            Aqui JavaScript toma lo que el estudiante escribio
+            en los campos usuario y contraseña.
+        */
+        let usuario= document.getELmentById("usuario").value;
+        let contraseña= documet.getELmentById("contraseña").value;
+
+        /*
+          DATOS CORRECTOS:
+          Aqui se define cual es el usuario correcto
+           y cual es la contraseña correcta.
+        */
+         let usuarioCorrecto= "ventas";
+         let contraseñaCorrecta="abcd";
+
+        /*
+           CONDICION:
+            Si el usuario y la contraseña son correcto,
+            se muestra el mensaje "Usuario correcto".
+            Si no son correctos, se muestra "Vuelve a intentar".
+        */
+         if (usuario-- usuarioCorrecto && contraseña-- contraseñaCorrecta)
+           document.getELmentById("mensaje").innerHTML = "Usuario correcto";
+          document.getELmentById("mensaje").style.color - "green" ;
+        } else  {
+         document.getELmentById("mensaje").innerHTML -"Vuelve a intentar"	
+         document.getELmentById("mensaje").style.color -"red";
+        }
+    }
+   </script>
+
+</body>
+</html>       
+	    	 
